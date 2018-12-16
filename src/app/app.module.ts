@@ -2,14 +2,13 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {DataService} from './data.service';
-
-import {AppComponent} from './app.component';
+// import {AppComponent} from './app.component';
 import {PolicyListComponent} from './policy-list/policy-list.component';
 import {PolicyCreateComponent} from './policy-create/policy-create.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
     PolicyListComponent,
     PolicyCreateComponent
   ],
@@ -18,6 +17,6 @@ import {PolicyCreateComponent} from './policy-create/policy-create.component';
     InMemoryWebApiModule.forRoot(DataService)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
 export class AppModule { }
