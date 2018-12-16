@@ -5,11 +5,13 @@ import {DataService} from './data.service';
 
 import {AppComponent} from './app.component';
 import {PolicyListComponent} from './policy-list/policy-list.component';
+import {PolicyCreateComponent} from './policy-create/policy-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PolicyListComponent
+    PolicyListComponent,
+    PolicyCreateComponent
   ],
   imports: [
     BrowserModule,
