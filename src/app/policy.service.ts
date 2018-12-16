@@ -18,37 +18,18 @@ export class PolicyService {
     return this.httpClient.get(`${this.SERVER_URL + 'policies'}/${policyId}`);
   }
 
-  public createPolicy(policy: { id: number, amount: number, clientId: number, userId: number, description: string }) {
-    return this.httpClient.post(`${this.SERVER_URL}` + 'policies'
+  public createPolicy(policy) {
+    return this.policyService.createPolicy(policy);
   }
 
-)
-}
 
-public
-deletePolicy(policyId);
-{
-  return this.httpClient.delete(`${this.SERVER_URL + 'policies'}/${policyId}`);
-}
+  public deletePolicy(policyId) {
+    return this.policyService.deletePolicy(policyId);
+  }
 
-public
-updatePolicy(policy;
-:
-{
-  number, amount;
-:
-  number, clientId;
-:
-  number, userId;
-:
-  number, description;
-:
-  string;
-}
-)
-{
-  return this.httpClient.put(`${this.SERVER_URL + 'policies'}/${policy.id}`);
-}
-
+  public updatePolicy(policy: { id: number, amount: number, clientId: number, userId: number, description: string }) {
+    let newPolicy: { id: number, amount: number, clientId: number, userId: number, description: string } = {policy.id, 0, 0, 0};
+    return this.policyService.updatePolicy(policyId);
+  }
 
 }
